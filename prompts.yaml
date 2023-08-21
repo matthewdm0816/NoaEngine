@@ -1,0 +1,38 @@
+dialog: |-
+  {essence_typeid}
+  Place:
+  [{place}]
+  Content:
+  [{content}]
+  Story Summary:
+  [{summary}]
+  Next Place:
+  [{place}]=>[{next_place}]
+character: |-
+  {essence_typeid}
+  Name:
+  [{name}]
+  Appearance:
+  [{appearance}]
+  Personality:
+  [{personality}]
+  Background:
+  [{background}]
+  Relationship:
+  [{relationship}]
+  Story Summary:
+  [{summary}]
+place: |-
+  {essence_typeid}
+  Name:
+  [{name}]
+  Description:
+  [{description}]
+  Story Summary:
+  [{summary}]
+flag:
+  {essence_typeid}
+  Name:
+  [{name}]
+  Description:
+  [{description}]
