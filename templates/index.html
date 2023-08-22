@@ -13,6 +13,14 @@
 <body>
     <div id="console"></div>
     <input type="text" id="command" placeholder="输入命令...">
-    <button id="load-conversation">加载对话</button>
+    <!-- <button id="load-conversation">加载对话</button> -->
+    <div class="dropdown">
+        <button class="dropbtn">加载对话</button>
+        <div class="dropdown-content">
+            <input type="file" id="file-input" accept=".json" />
+            <button id="load-conversation">确认加载</button>
+        </div>
+    </div>
+
 </body>
 </html>

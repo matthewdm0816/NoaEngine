@@ -9,14 +9,16 @@ body {
     background-color: #1e1e1e;
     color: #a9b7c6;
     font-family: 'Courier New', monospace;
-    height: 400px;
+    height: 600px;
     padding: 10px;
     overflow: scroll;
     border-radius: 5px;
     border: 2px solid #3c3f41;
+    /* width: 90%; */
 }
 
-.user-input, .response {
+.user-input,
+.response {
     background-color: #3c3f41;
     border-radius: 10px;
     padding: 5px;
@@ -25,12 +27,30 @@ body {
     margin: 5px 0;
 }
 
-.user-input img, .response img {
+.user-input img,
+.response img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
+.user-input:hover,
+.response:hover {
+    background-color: #50555a;
+    /* 悬停时的背景颜色 */
+    transition: background-color 0.3s;
+    /* 平滑过渡效果 */
+}
+
+.user-input img:hover,
+.response img:hover {
+    transform: scale(1.1);
+    /* 悬停时的头像放大效果 */
+    transition: transform 0.3s;
+    /* 平滑过渡效果 */
+}
+
 
 #console div:before {
     content: '';
@@ -62,4 +82,50 @@ button#load-conversation:hover {
     background-color: #0056b3;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    /* 增加与上方命令行输入的边距 */
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 120px;
+    /* 减小下拉菜单的宽度 */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    /* 减小内边距 */
+    z-index: 1;
+}
+
+.dropdown-content input,
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    /* 减小元素之间的边距 */
+}
+
+.dropbtn {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    /* 减小按钮的大小 */
+    font-size: 14px;
+    /* 减小字体大小 */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    /* 减小圆角大小 */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
