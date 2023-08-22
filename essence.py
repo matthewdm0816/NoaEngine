@@ -3,11 +3,12 @@ import logging
 import json
 import itertools
 from omegaconf import OmegaConf
+from config import Config, Prompts
 logger = logging.getLogger(__name__)
 
 DEFAULT_PROPERTY_TYPE = 'default'
 
-Prompts = OmegaConf.load('prompts.yaml')
+# Prompts = OmegaConf.load('prompts.yaml')
 
 
 class InstanceCounterMeta(type):

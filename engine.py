@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, url_for
 from config import Config
 import json
+import pretty_errors
 
 app = Flask(__name__)
 
