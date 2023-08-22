@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandline-like Interface</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="static/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <div id="console"></div>
+    <input type="text" id="command" placeholder="输入命令...">
+    <script>
+        $('#command').keyup(function(e) {
+            if (e.key === 'Enter') {
+                let cmd = $('#command').val();
+                $('#console').append('<div class="user-input"><img src="static/user.png" alt="avatar"><span>' + cmd + '</span></div>');
+                $.ajax({
+                    url: '/command',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({command: cmd}),
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#console').append('<div class="response"><img src="static/noa.webp" alt="avatar"><span>' + data.response + '</span></div>');
+                        $('#command').val('');
+                    }
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>
