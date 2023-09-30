@@ -1,1 +1,10 @@
 dm_name: 乃亜
+llm_type: azure_gpt3_5
+openai:
+  api_key: sk-xxxxxxxxx
+  model_name: gpt-3.5-turbo
+  temperature: 1.0
+  max_tokens: 512
+  frequency_penalty: 0
+  presence_penalty: 0
+  top_p: 1

@@ -57,7 +57,8 @@ place: |-
   [{description}]
   Story Summary:
   [{summary}]
-flag:
+
+flag: |-
   {essence_typeid}
   Name:
   [{name}]
