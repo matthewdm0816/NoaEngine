@@ -26,3 +26,10 @@ class ChatGPT3_5:
             raise Exception('The input text is too long.')
         response = requests.post(self.endpoint, headers=self.header, data=json.dumps(self.body))
         return response.json()['choices'][0]['message']['content']
+
+if __name__ == "__main__":
+    fptxt = open('azgpt.key').readlines()
+    endpoint = fptxt[0].strip()
+    apiKey = fptxt[1].strip()
+    chat = ChatGPT3_5(endpoint, apiKey)
+    print(chat.forward('Hello World'))
